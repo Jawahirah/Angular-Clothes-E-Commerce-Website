@@ -1,0 +1,22 @@
+.navbar-buttons {
+    gap: 1rem;
+}
+
+.navbar-buttons i {
+    vertical-align: middle;
+}
+
+.navbar-buttons a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: auto;
+    color: black;
+}
+
+#logo {
+    width: 7rem;
+}
+
+.bold-text{
+    font-weight: 600;
+}

@@ -1,0 +1,43 @@
+.text-transform-uppercase {
+    text-transform: uppercase;
+}
+
+.card-body h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight:bolder;
+}
+
+.card-body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-text{
+    color: gray;
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+.card-img{
+    height: 10rem;
+    object-fit: contain;
+}
+.card-text, .card-title{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.amount-width{
+    width: auto;
+    min-width: 50px;
+}
+
+.card-body__info{
+    text-align: left;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}

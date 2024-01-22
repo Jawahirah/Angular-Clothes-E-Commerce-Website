@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&family=Rajdhani&display=swap');
+
+.advertise {
+   /* min-height: 80vh; */
+}
+
+p,
+h3 {
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.advertise__image {
+    height: -webkit-fill-available;
+    object-fit: cover;
+    border-radius: 10px;
+
+}

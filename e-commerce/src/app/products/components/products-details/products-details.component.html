@@ -1,1 +1,15 @@
-<p>products-details works!</p>
+<div class="row d-flex justify-content-center m-5 flex-wrap align-items-center" *ngIf="!loading">
+    <div class="col-6 col-md">
+        <img [src]="product.image" class="w-50"/>
+    </div>
+    <div class="col-6 col-md text-center pt-5">
+        <h5>{{product.title}}</h5>
+        <p>{{product.description}}</p>
+        <p class="mt-5 fw-bold">{{product.price}} SR</p>
+        <button class="btn btn-dark w-50 bold-text" (click)="addToCart()">Add to cart</button>
+    </div>
+</div>
+
+<div class="text-center" *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>

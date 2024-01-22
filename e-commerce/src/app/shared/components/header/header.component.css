@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .navbar-buttons {
     gap: 1rem;
 }
@@ -14,9 +16,21 @@
 }
 
 #logo {
-    width: 7rem;
+    width: 5rem;
+    cursor: pointer;
 }
 
 .bold-text{
     font-weight: 600;
+}
+
+.icons{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
 }

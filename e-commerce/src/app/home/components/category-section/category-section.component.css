@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+section {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.category {
+    display: grid;
+    height: 80vh;
+    gap: 1.2rem;
+}
+
+.category__image {
+    border-radius: 10px;
+    color: white;
+    background-size:cover;
+    cursor: pointer;
+}
+
+.category__image-jewelry {
+    background-image: url(../../../../assets/images/Jewelry2.jpg);
+}
+
+.category__image-jacket {
+    background-image: url(../../../../assets/images/Jacket2.jpg);
+}
+
+.category__image-backpack {
+    background-image: url(../../../../assets/images/backpack.jpg);
+}
+
+.category__image-electronic {
+    background-image: url(../../../../assets/images/electronics.jpg);
+}
+
+.category__image-women {
+    background-image: url(../../../../assets/images/women-clothing.jpg);
+}
+
+.category__image-men {
+    background-image: url(../../../../assets/images/men.jpg);
+}
+
+.category__image:hover {
+    filter: grayscale(0%);
+}
+
+.category__image-title {
+    letter-spacing: 4px;
+}
+
+@media(min-width:991px) {
+
+    .category {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .grid-row-span-2 {
+        grid-row: span 2;
+    }
+    .category__image {
+        filter: grayscale(100%);
+    }
+    
+}

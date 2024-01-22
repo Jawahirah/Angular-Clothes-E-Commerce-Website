@@ -1,1 +1,14 @@
-<p>all-products works!</p>
+<div class="container d-flex my-5 flex-column ">
+    <div class="my-2 text-left ">
+        <h1 class="text-center">Our Products</h1>
+        <app-select [data]="categories" (selectedValue)="filterCategory($event)"></app-select>
+    </div>
+    <div class="row w-100  mx-auto" *ngIf="!loading">
+        <div class="col my-3 d-flex justify-content-center align-items-center " *ngFor="let product of products">
+            <app-product [product]="product" (selectedProduct)="addToCart($event)"></app-product>
+        </div>
+    </div>
+    <div class="text-center w-100" *ngIf="loading">
+        <app-spinner></app-spinner>
+    </div>
+</div>

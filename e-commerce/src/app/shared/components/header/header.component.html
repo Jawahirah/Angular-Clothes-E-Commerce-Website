@@ -1,11 +1,40 @@
-<nav class="navbar bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand">
-            <img src="../../../../assets/images/logo.png" id="logo" alt="logo">
-        </a>
-        <div class="d-flex navbar-buttons pe-3">
-            <a href="#" class="d-inline bold-text">Products</a>
-            <a href="#"><i class="bi bi-bag fs-4"></i> </a>
+<header>
+    <p class="text-light bg-dark py-2 text-center my-0">IT'S NOT TOO LATE TO GIVE A MEANINGFUL CHRISTMAS GIFT (FIND OUT
+        HERE) 🎁✨ </p>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand">
+                <img src="../../../../assets/images/logo.png" class="logo" id="logo" alt="logo" routerLink="/">
+            </a>
+            
+            <div class="d-flex navbar-buttons pe-3">
+                <div class="m-auto text-center">
+                    <a href="#" routerLink="/" class=" fs-4" >Home</a>
+                    <a href="#"routerLink="/products"class="mx-4 fs-4" >Products</a>
+                </div>
+                <a routerLink="/cart"><i class="bi  bi-bag-fill fs-3 icons mx-0  position-relative">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fs-6">
+                        {{numberOfItems}}
+                    
+                      </span>
+                </i> </a>
+            </div>
         </div>
+    </nav>
+</header>
+<button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
-</nav>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+

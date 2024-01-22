@@ -1,0 +1,23 @@
+img {
+    width: 7rem;
+}
+
+.w-fit-content {
+    width: fit-content;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.contact__title {
+    font-size: 0.87rem;
+}
+
+.categories li {
+    list-style: none;
+}
+
+footer{
+    background-color: #f8f9fa
+}

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Ubuntu:wght@300&display=swap');
+
+section {
+    background-image: url(../../../../../assets/images/shopping-bags.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+.main__title {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}

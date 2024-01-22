@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+  
+  get numberOfItems(){
+    let tatalItems=0;
+    JSON.parse(localStorage.getItem('cart')!).forEach((ele:any)=>{tatalItems+=ele.quantity});
+    return tatalItems;
+  }
 }

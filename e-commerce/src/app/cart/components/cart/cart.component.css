@@ -1,0 +1,19 @@
+.w-3{
+    width: 3rem;
+}
+
+.quantity-controls{
+    border: 1px solid;
+    border-radius: 48px;
+    height: 29px;
+}
+
+
+.quantity{
+    border: unset;
+    width: 50px;
+}
+
+.w-fit-content{
+    width: fit-content;
+}

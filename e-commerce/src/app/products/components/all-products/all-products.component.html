@@ -3,10 +3,17 @@
         <h1 class="text-center">Our Products</h1>
         <app-select [data]="categories" (selectedValue)="filterCategory($event)"></app-select>
     </div>
-    <div class="row w-100  mx-auto" *ngIf="!loading">
-        <div class="col my-3 d-flex justify-content-center align-items-center " *ngFor="let product of products">
-            <app-product [product]="product" (selectedProduct)="addToCart($event)"></app-product>
+    <div class="row w-100 mx-auto" *ngIf="!loading">
+
+        <div class="text-center pt-5" *ngIf="hasError">
+            <img src="./../../../../assets/images/danger-sign_8376179.png" width="50px" alt="danger sign">
+            <p class="fs-3 fw-bold">No Product found !</p>
         </div>
+
+        <div class="col my-3 d-flex justify-content-center align-items-center " *ngFor="let product of products">
+            <app-product *ngIf="!hasError" [product]="product" (selectedProduct)="addToCart($event)"></app-product>
+        </div>
+
     </div>
     <div class="text-center w-100" *ngIf="loading">
         <app-spinner></app-spinner>

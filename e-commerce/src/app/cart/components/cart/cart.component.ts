@@ -11,6 +11,7 @@ export class CartComponent implements OnInit {
   total: number = 0;
   success: boolean = false;
   message: any='';
+  hasError:boolean=false;
 
 
   constructor(private service: ServiceService) { }
@@ -59,17 +60,21 @@ export class CartComponent implements OnInit {
           date: new Date(),
           products: products
         }
-        this.service.AddNewProduct(model).subscribe(res => {
+        this.service.AddNewProduct(model).subscribe({next: res => {
           this.message = { succes: true, msgTitle:'Awesome', mssage: 'Thank you for your purchase! Your checkout is complete!' };
           this.success = true
           this.cartProducts = []
           this.total = 0;
+          this.hasError=false;
           localStorage.setItem('cart', JSON.stringify(this.cartProducts))
-        });
+        },
+        error:()=>{
+          this.hasError=true;
+        }});
+        
       } else {
         this.message = { succes: false, msgTitle:'Oops! your cart is empty', mssage: 'Looks like you haven\'t added anything to your cart' };
       }
-      // 
     } catch (error: any) {
       this.message = { succes: false, msgTitle:'Oops!', mssage: 'Something wrong happened' };
 

@@ -41,3 +41,16 @@
     transform: scale(1.1);
     transition: 0.5s ease;
 }
+.toast{
+    z-index: 999;
+}
+.bi-cart{
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+    .card:hover{
+        transform:unset;
+        transition: unset;
+    }
+}

@@ -1,4 +1,4 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -6,9 +6,10 @@ import { Component,Input, OnInit } from '@angular/core';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
-ngOnInit(): void {
-  this.message={sucess:true}
-}
-@Input() msgId!:string;
-@Input() message!:any;
+  @Input() msgId!: string;
+  @Input() message!: any;
+
+  ngOnInit(): void {
+    this.message = { sucess: true }
+  }
 }

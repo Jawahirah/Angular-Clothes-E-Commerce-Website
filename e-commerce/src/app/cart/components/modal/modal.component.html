@@ -1,14 +1,14 @@
-<div class="modal fade" [id]="msgId" tabindex="-1" aria-labelledby="modalMsgLabel" aria-hidden="true" >
+<div class="modal fade" [id]="msgId" tabindex="-1" aria-labelledby="modalMsgLabel" aria-hidden="true" *ngIf="msgId" >
     <div class="modal-dialog  modal-dialog-centered" >
-        <div class="modal-content"  >
-            <div class="modal-body text-center ">
-                <i class="bi  fs-1 " [ngClass]="message.succes ? ['bi-check-circle-fill','text-success']: ['bi-x-circle-fill','text-danger']"></i>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+            <div class="modal-body text-center py-5">
                 <h4>{{message.msgTitle}}</h4>
-                
                 <h6 class="text-secondary fw-light">{{message.mssage}}</h6>
             </div>
             <div class="modal-footer border-0">
-                <button type="button" class="btn w-100 text-center" data-bs-dismiss="modal" [ngClass]="message.succes ? 'btn-success ':'btn-danger ' ">OK</button>
             </div>
         </div>
     </div>

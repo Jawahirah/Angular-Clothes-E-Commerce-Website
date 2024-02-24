@@ -1,17 +1,24 @@
-<div class="card text-center mx-auto" style="width: 22rem;" >
-    <div class="card-body" >
-        <div routerLink="/details/{{product.id}}" class="card-body__info">
-            <img [src]="product.image" class="card-img-top card-img my-3" alt="product">
-            <h6 class="card-title text-transform-uppercase ">{{product.title}}</h6>
-            <p class="card-text">{{product.description}}</p>
-        </div>
-        <div class="d-flex justify-content-between align-items-baseline">
-            <h6>{{product.price}} SR</h6>
-            <div class="d-flex justify-content-end w-25 ">
-                <button class="btn px-0 mx-0 cart" (click)="add()">
-                    <i class="bi bi-cart fs-2 px-0 mx-1 text-secondary"></i>
-                </button>
-            </div>
-        </div>
+<div class="card text-center mx-auto" style="width: 22rem;">
+  <div class="card-body">
+    <div routerLink="/details/{{product.id}}" class="card-body__info">
+      <img [src]="product.image" class="card-img-top card-img my-3" alt="product">
+      <h6 class="card-title text-transform-uppercase ">{{product.title}}</h6>
+      <p class="card-text">{{product.description}}</p>
     </div>
+    <div class="d-flex justify-content-between align-items-baseline">
+      <h6>{{product.price}} SR</h6>
+      <div class="d-flex justify-content-end w-25  ">
+        <i class="bi bi-cart fs-2 px-0 mx-1 text-secondary" (click)="showToast(); add()"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast align-items-center mt-2 mx-2  position-fixed top-0 end-0 bg-success text-light" role="alert"
+  aria-live="assertive" aria-atomic="true" #liveToast>
+  <div class="d-flex">
+    <div class="toast-body ">
+      Added a new item to the cart
+    </div>
+    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
 </div>

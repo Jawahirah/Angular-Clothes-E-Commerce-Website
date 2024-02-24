@@ -15,6 +15,7 @@ export class AllProductsComponent implements OnInit {
   loading: boolean = false;
   products: Product[] = [];
   cartProducts: any[] = [];
+  hasError: boolean = false;
 
   ngOnInit(): void {
     this.getProducts();
@@ -45,31 +46,42 @@ export class AllProductsComponent implements OnInit {
 
   getProducts() {
     this.loading = true;
-    this.service.getAllProducts().subscribe((res: any) => {
-      this.loading = false;
-      this.products = res;
-    },
-      (error: any) => {
+    this.service.getAllProducts().subscribe({
+      next: (res: any) => {
+        this.loading = this.hasError= false;
+        this.products = res;
+      },
+      error: (error: any) => {
         this.loading = false;
-        console.log('Error: ', error.status, error.message)
+        this.hasError = true;
       }
-    );
+    })
   }
+
 
   getCategories() {
     this.loading = true;
-    this.service.getAllCategories().subscribe((res: any) => {
-      this.loading = false;
-      this.categories = res;
+    this.service.getAllCategories().subscribe({
+      next: (res: any) => {
+        this.loading = this.hasError = false;
+        this.categories = res;
+      }
     });
   }
 
   getProductsByCategory(category: string) {
     this.loading = true;
-    this.service.getProductsByCategory(category).subscribe((res: any) => {
-      this.loading = false;
-      this.products = res;
-    });
+    this.service.getProductsByCategory(category).subscribe({
+      next: (res: any) => {
+        this.loading = this.hasError = false;
+        this.products = res;
+      },
+      error: (error: any) => {
+        this.loading = false;
+        this.hasError = true;
+      }
+    }
+    );
   }
 
 

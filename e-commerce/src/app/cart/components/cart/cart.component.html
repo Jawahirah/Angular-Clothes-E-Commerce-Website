@@ -1,4 +1,8 @@
-<div class=" table-responsive container mt-5">
+<div class="text-center pt-5 my-5" *ngIf="hasError">
+    <img src="./../../../../assets/images/danger-sign_8376179.png" width="50px" alt="danger sign">
+    <p class="fs-3 fw-bold">Oops, something went wrong!</p>
+  </div>
+<div class=" table-responsive container mt-5" *ngIf="!hasError">
 <table class="table ">
     <thead class="text-center align-middle">
         <tr>

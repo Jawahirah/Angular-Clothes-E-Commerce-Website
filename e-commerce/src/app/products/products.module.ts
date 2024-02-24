@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 
+
 @NgModule({
   declarations: [
     AllProductsComponent,
@@ -25,7 +26,7 @@ import { RouterModule, Routes } from '@angular/router';
   ],exports:[
     AllProductsComponent,
     ProductsDetailsComponent,
-    ProductComponent,
+    ProductComponent
   ]
 })
 export class ProductsModule { }

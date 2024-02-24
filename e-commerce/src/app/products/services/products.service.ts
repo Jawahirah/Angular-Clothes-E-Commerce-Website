@@ -22,7 +22,6 @@ export class ProductsService {
   }
 
   getSingleProduct(id:number){
-    console.log(id)
     return this.http.get(environment.baseAPI+'products/'+id);
   }
 }
